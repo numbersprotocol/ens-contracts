@@ -46,10 +46,18 @@ contract NameWrapper is
     string public constant name = "NameWrapper";
 
     uint64 private constant GRACE_PERIOD = 90 days;
+    /* Change base node from eth to num
+     * base node eth: 0x93cdeb708b7545dc668eb9280176169d1c33cfd8ed6f04690a0bcc88a93fc4ae
+     * base node num: 0xd12f8111592c02bc30ccd7658a1ceb1463a12aca41d02944599b832ec0f86c9d
+     */
     bytes32 private constant ETH_NODE =
-        0x93cdeb708b7545dc668eb9280176169d1c33cfd8ed6f04690a0bcc88a93fc4ae;
+        0xd12f8111592c02bc30ccd7658a1ceb1463a12aca41d02944599b832ec0f86c9d;
+    /* Change labelhash from eth to num
+     * labelhash eth: 0x4f5b812789fc606be1b3b16908db13fc7a9adf7ca72641f84d75b47069d3d7f0
+     * labelhash num: 0xcfd9313d5f9675a87ffc71a6323536291b72d9c27d60444f4a0d90835ba287cc
+     */
     bytes32 private constant ETH_LABELHASH =
-        0x4f5b812789fc606be1b3b16908db13fc7a9adf7ca72641f84d75b47069d3d7f0;
+        0xcfd9313d5f9675a87ffc71a6323536291b72d9c27d60444f4a0d90835ba287cc;
     bytes32 private constant ROOT_NODE =
         0x0000000000000000000000000000000000000000000000000000000000000000;
 

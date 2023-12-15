@@ -41,8 +41,12 @@ contract ETHRegistrarController is
     using Address for address;
 
     uint256 public constant MIN_REGISTRATION_DURATION = 28 days;
+    /* Change base node from eth to num
+     * base node eth: 0x93cdeb708b7545dc668eb9280176169d1c33cfd8ed6f04690a0bcc88a93fc4ae
+     * base node num: 0xd12f8111592c02bc30ccd7658a1ceb1463a12aca41d02944599b832ec0f86c9d
+     */
     bytes32 private constant ETH_NODE =
-        0x93cdeb708b7545dc668eb9280176169d1c33cfd8ed6f04690a0bcc88a93fc4ae;
+        0xd12f8111592c02bc30ccd7658a1ceb1463a12aca41d02944599b832ec0f86c9d;
     uint64 private constant MAX_EXPIRY = type(uint64).max;
     BaseRegistrarImplementation immutable base;
     IPriceOracle public immutable prices;

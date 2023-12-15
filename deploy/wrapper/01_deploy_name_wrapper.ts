@@ -56,7 +56,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   const artifact = await deployments.getArtifact('INameWrapper')
   const interfaceId = computeInterfaceId(new Interface(artifact.abi))
-  const resolver = await registry.resolver(ethers.utils.namehash('eth'))
+  const resolver = await registry.resolver(ethers.utils.namehash('num'))
   if (resolver === ethers.constants.AddressZero) {
     console.log(
       `No resolver set for .eth; not setting interface ${interfaceId} for NameWrapper`,
@@ -65,7 +65,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   }
   const resolverContract = await ethers.getContractAt('OwnedResolver', resolver)
   const tx3 = await resolverContract.setInterface(
-    ethers.utils.namehash('eth'),
+    ethers.utils.namehash('num'),
     interfaceId,
     nameWrapper.address,
   )
