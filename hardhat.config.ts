@@ -79,6 +79,18 @@ const config: HardhatUserConfig = {
       chainId: 1,
       accounts: real_accounts,
     },
+    snow: {
+      url: 'https://testnetrpc.num.network/',
+      tags: ['test', 'legacy', 'use_root'],
+      chainId: 10508,
+      accounts: real_accounts,
+    },
+    jade: {
+      url: 'https://mainnetrpc.num.network/',
+      tags: ['legacy', 'use_root'],
+      chainId: 10507,
+      accounts: real_accounts,
+    },
   },
   mocha: {},
   solidity: {
